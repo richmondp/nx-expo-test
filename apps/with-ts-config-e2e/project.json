@@ -1,0 +1,16 @@
+{
+  "name": "with-ts-config-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/with-ts-config-e2e/src",
+  "implicitDependencies": ["with-ts-config"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/with-ts-config-e2e"],
+      "options": {
+        "config": "apps/with-ts-config-e2e/playwright.config.ts"
+      }
+    }
+  }
+}
