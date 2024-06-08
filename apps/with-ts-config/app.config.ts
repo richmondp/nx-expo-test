@@ -1,8 +1,12 @@
 import { ConfigContext, ExpoConfig } from "@expo/config";
 
+export interface CustomAppConfig {
+  customProperty: string
+}
+
 export default ({
   config,
-}: ConfigContext): ExpoConfig => ({
+}: ConfigContext): ExpoConfig  & { extra: CustomAppConfig } => ({
   ...config,
   "name": "WithTsConfig",
   "slug": "with-ts-config",
@@ -30,6 +34,9 @@ export default ({
   "web": {
     "favicon": "./assets/favicon.png",
     "bundler": "metro"
+  },
+  extra: {
+    customProperty: 'customValue'
   },
   "plugins": []
 });
