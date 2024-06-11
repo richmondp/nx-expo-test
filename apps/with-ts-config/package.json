@@ -9,17 +9,7 @@
     "react-native": "*",
     "expo": "*",
     "react-native-svg": "*",
-    "react-native-web": "*",
-    "expo-dev-client": "~3.3.12",
-    "react": "18.2.0",
-    "expo-modules-core": "*",
-    "expo-dev-launcher": "*",
-    "expo-dev-menu": "*",
-    "expo-json-menu": "*",
-    "expo-json-utils": "*",
-    "expo-manifests": "*",
-    "expo-asset": "*",
-    "expo-font": "*"
+    "react-native-web": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/with-ts-config && cp package-lock.json apps/with-ts-config",
